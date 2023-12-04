@@ -1,31 +1,18 @@
-<div class="formularioContato">
-        
-    <form action="#" method="post" enctype="multipart/form-data">
+<form action="/formulario-contato" method="post">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="texto" id="nome" name="nome_usuario">
+    </div>
+    <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email_usuario">
+    </div>
+    <div>
+        <label for="texto">Texto:</label>
+        <textarea id="texto" name="texto_usuario"></textarea>
+    </div>
+</form>
 
-        <label>
-            <span><i class="icon icon-user-1"></i> Nome</span>
-            <input type="text" name="nome" required="">
-        </label>
-        
-        <label>
-            <span><i class="icon icon-email"></i> E-mail</span>
-            <input type="text" name="email" class="fade_8S">
-        </label>
-
-        <label>
-            <span><i class="icon icon-flag"></i> Assunto</span>
-            <input type="text" name="assunto" required="">
-        </label>
-        
-        <label>
-            <span><i class="icon icon-comment"></i> Mensagem</span>
-             <textarea name="mensagem" rows="3" required=""></textarea> 
-        </label>
-       
-        <input type="hidden" name="acao" value="enviar" />
-        <button class="btn-envia" title="Enviar"><b class="icon icon-paper-plane-o"> Enviar</b></button>
-    
-
-    </form>
-    
-</div><!--Formulario Contato-->
+<div class="button">
+    <button type="submit">Enviar</button>
+  </div>
