@@ -67,7 +67,7 @@
 .formularioContato label select:focus   { box-shadow:0 0 5px 0px rgb(231, 178, 215); border:1px rgb(230, 37, 198) solid; }
 .formularioContato label textarea:focus { box-shadow:0 0 5px 0px rgb(231, 178, 210); border:1px rgb(230, 37, 211) solid; color:rgb(230, 37, 204);}
 .formularioContato button.btn-envia { 
-    background-color:rgb(37,174,230); 
+    background-color:rgb(230, 37, 137); 
     width:100%; display:block; 
     margin:auto; cursor:pointer; 
     border-radius:4px;  
