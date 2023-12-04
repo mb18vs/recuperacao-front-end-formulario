@@ -63,9 +63,9 @@
     outline:none;
     transition: 0.3s;   
 }
-.formularioContato label input:focus    { box-shadow:0 0 5px 0px rgb(178,216,231); border:1px rgb(37,174,230) solid; color:rgb(37,174,230);}
-.formularioContato label select:focus   { box-shadow:0 0 5px 0px rgb(178,216,231); border:1px rgb(37,174,230) solid; }
-.formularioContato label textarea:focus { box-shadow:0 0 5px 0px rgb(178,216,231); border:1px rgb(37,174,230) solid; color:rgb(37,174,230);}
+.formularioContato label input:focus    { box-shadow:0 0 5px 0px rgb(231, 178, 218); border:1px rgb(230, 37, 162) solid; color:rgb(230, 37, 207);}
+.formularioContato label select:focus   { box-shadow:0 0 5px 0px rgb(231, 178, 215); border:1px rgb(230, 37, 198) solid; }
+.formularioContato label textarea:focus { box-shadow:0 0 5px 0px rgb(231, 178, 210); border:1px rgb(230, 37, 211) solid; color:rgb(230, 37, 204);}
 .formularioContato button.btn-envia { 
     background-color:rgb(37,174,230); 
     width:100%; display:block; 
