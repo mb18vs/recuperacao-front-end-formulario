@@ -1,62 +1,269 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Formulário de contato</title>
-	<link rel="stylesheet" href="css/bulma.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 50%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    header {
+      background: #ffffff;
+      color: #333;
+      padding-top: 30px;
+      min-height: 70px;
+      border-bottom: #e8491d 4px solid;
+    }
+
+    header a {
+      color: #333;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    header ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    header #logo {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    header #logo img {
+      width: 70%;
+    }
+
+    header #logo h1 {
+      display: inline;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    header #logo img,
+    header #logo h1,
+    header #logo a {
+      float: left;
+      margin-top: 10px;
+    }
+
+    header #logo a {
+      margin-left: 2%;
+    }
+
+    header nav {
+      float: right;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    header .main-nav {
+      display: none;
+    }
+
+    header #menu-icon {
+      display: none;
+    }
+
+    section {
+      float: left;
+      width: 68%;
+      margin: 0 2% 0 0;
+    }
+
+    aside {
+      float: left;
+      width: 28%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      clear: both;
+      overflow: hidden;
+    }
+
+    .main h2 {
+      color: #333;
+    }
+
+    footer {
+      background: #666;
+      color: #fff;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    footer a {
+      color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      header #logo,
+      header #menu-icon,
+      header nav,
+      header #logo a {
+        float: none;
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+
+      header {
+        padding-top: 20px;
+        position: relative;
+      }
+
+      header h1 {
+        margin-bottom: 20px;
+      }
+
+      header #logo img {
+        width: 50%;
+      }
+
+      header #logo h1 {
+        display: block;
+        font-size: 1.5em;
+        margin: 0;
+      }
+
+      header #menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      header a:hover,
+      header #menu-icon {
+        background-color: none;
+        color: none;
+      }
+
+      header nav {
+        display: none;
+      }
+
+      header #menu-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        background: #e8491d;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      header .main-nav {
+        display: inline;
+        width: 100%;
+        background-color: #333;
+      }
+
+      header .main-nav li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 1px;
+      }
+
+      header .main-nav li a {
+        display: block;
+        padding: 10px 0;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  </style>
 </head>
 <body>
-	<section class="section">
-		<div class="container">
-			<div class="columns is-centered">
-				<div class="column is-half">
-					<h1 class="title has-text-centered">Formulário de Contato - Canal TI</h1>
- 
-					<form action="enviar.php" method="POST">
-						<div class="field">
-							<label class="label">Nome</label>
-							<div class="control">
-								<input name="nome" class="input" type="text" placeholder="Seu nome">
-							</div>
-						</div>
- 
-						<div class="field">
-							<label class="label">Email *</label>
-							<div class="control">
-								<input name="email" class="input" type="email" placeholder="Seu email">
-							</div>
-						</div>
- 
-						<div class="field">
-							<label class="label">Assunto</label>
-							<div class="control">
-								<div class="select is-fullwidth">
-									<select name="assunto">
-										<option>Reportar erro</option>
-										<option>Anúncios</option>
-										<option>Outro</option>
-									</select>
-								</div>
-							</div>
-						</div>
- 
-						<div class="field">
-							<label class="label">Mensagem *</label>
-							<div class="control">
-								<textarea name="mensagem" class="textarea" placeholder="Deixe sua mensagem" maxlength="2000"></textarea>
-							</div>
-						</div>
- 
-						<div class="field is-grouped">
-							<div class="control">
-								<button class="button is-link is-medium">Enviar</button>
-							</div>
-						</div>
-					</form>
- 
-				</div>
-			</div>
-		</div>
-	</section>
+
+  <div class="container">
+    <header>
+      <div id="logo">
+        <img src="logo.png" alt="Logo">
+        <h1>Meu Site</h1>
+        <a href="#">Home</a>
+      </div>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="#">Página Inicial</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+      <div id="menu-icon">☰</div>
+    </header>
+  </div>
+
+  <div class="container">
+    <section>
+      <div class="main">
+        <h2>Formulário de Contato</h2>
+        <form action="processar_formulario.php" method="post">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </section>
+
+    <aside>
+      <h2>Informações de Contato</h2>
+      <p>Entre em contato conosco para mais informações.</p>
+      <address>
+        <strong>Endereço:</strong><br>
+        Rua Exemplo, 123<br>
+        Cidade, Estado<br>
+        CEP: 12345-678
+      </address>
+      <p><strong>Email:</strong> info@meusite.com</p>
+      <p><strong>Telefone:</strong> (123) 456-7890</p>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-icon').addEventListener('click', function () {
+      var mainNav = document.querySelector('.main-nav');
+      if (mainNav.style.display === '' || mainNav.style.display === 'none') {
+        mainNav.style.display = 'block';
+      } else {
+        mainNav.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
